@@ -1,0 +1,11 @@
+
+.wrap{
+
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: center;
+  margin-bottom: 5px;
+  text-align: left;
+  justify-content: center;
+}

@@ -1,0 +1,54 @@
+
+  
+  .div input {
+   
+    position: relative;
+    width: 33%;
+    background-color: #ffffff;
+    color: #080710;   
+    border-radius: 5px;
+    cursor: pointer;    
+    padding: 24px 32px;
+    border: 0;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(30px);
+    color: rgba(52, 178, 13, 0.8);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;  
+    display: inline-flex;
+    flex-direction: row;
+    height: fit-content;
+    
+   
+  }
+  .div button{
+    margin-top: 10px;
+    width: 33%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 24px 32px;
+    border: 0;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(30px);
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+
+  

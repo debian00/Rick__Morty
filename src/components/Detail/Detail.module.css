@@ -1,0 +1,67 @@
+.containerdet {
+    /* La primera columna ajustará su tamaño automáticamente según el contenido */
+   
+    height: 45%;    
+    background-color: rgba(255, 255, 255, 0.03);   
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 35px 35px;
+    text-decoration: none;
+    width: 50%;    
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+    
+  
+    .containerdet2 h2{
+        font-family: "Poppins", sans-serif;
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 14px;
+        width: fit-content;
+
+
+    }
+    .containerdet2 h1{
+        font-family: "Poppins", sans-serif;
+        color: #ffffff;
+        font-weight: 600;
+        width: fit-content;
+
+
+    }
+    
+   
+
+.containerdet img{
+ border-radius: 50%;
+ width: fit-content;
+ height: fit-content;
+ 
+}
+  
+    
+
+.containerdet2 {
+    /* La primera columna ajustará su tamaño automáticamente según el contenido */
+   
+    height: 45%;    
+    background-color: rgba(24, 78, 24, 0.03);   
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(28, 14, 136, 0.6);
+    padding: 35px 35px;
+    text-decoration: none;
+    width: 40%
+    
+}
+    .containerdet > * {
+  flex: 1;
+  margin: 10px;
+}

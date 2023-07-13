@@ -1,0 +1,91 @@
+
+    
+ 
+  
+
+form {
+  height: auto;
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.03);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  padding: 50px 35px;
+  height: auto;
+
+}
+form * {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  outline: none;
+  border: none;
+}
+form h3 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 42px;
+  text-align: center;
+}
+
+form label {
+  display: block;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 500;
+}
+form input {
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(178, 140, 140, 0.05);
+  border-radius: 3px;
+  padding-left: 10px;
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+::placeholder {
+  color: #ae00de;
+}
+
+
+form button {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #ffffff;
+  color: #080710;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 24px 32px;
+  border: 0;
+  text-decoration: none;
+  border-radius: 15px;
+  background-color: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(30px);
+  color: rgba(255,255,255,0.8);
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+ 
+form button:hover {
+    background-color: #ffffff33;
+  }
+ p{
+    color: rgb(188, 114, 160);
+ }
+ 

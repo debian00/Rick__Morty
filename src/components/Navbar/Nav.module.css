@@ -1,0 +1,70 @@
+
+    
+nav h3 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 42px;
+  text-align: center;
+}
+nav div{
+  text-align: center;
+ 
+  
+  
+
+}
+
+
+nav input {
+ 
+  flex-direction: row;
+  height: 50px;
+  width: 33.33%;
+  background-color: rgba(178, 140, 140, 0.05);
+  border-radius: 3px;
+  padding-left: 10px;
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+  display: block;
+  color: rgb(0, 0, 0);
+}
+
+nav button {
+  margin-top: 0px;
+  width: 33.33%;
+  background-color: #851885;
+  color: #080710;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 24px 32px;
+  border: 0;
+  text-decoration: none;
+  border-radius: 15px;
+  background-color: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(30px);
+  color: rgba(255,255,255,0.8);
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+nav link{
+text-decoration: none;
+
+}
+nav a{
+text-decoration: none;
+color: rgba(255,255,255,0.8);
+
+}
+
+ 
+nav button:hover {
+    background-color: #7325c67f;
+  }
