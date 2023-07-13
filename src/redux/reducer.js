@@ -27,7 +27,10 @@ const initialState = {
             character.gender === payload)
           return{
                 ...state,
-                myFavorites:allCharactersFiltered
+                myFavorites:
+                payload === "allCharacters"
+                ? [...state.allCharactersFav]
+                : allCharactersFiltered
             
           }
           case ORDER:
