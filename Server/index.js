@@ -1,29 +1,22 @@
 //Importar el modulo http core
 
 const http = require("http")
-const data = require("./src/utils/data")
+const { getCharById } = require("./src/controllers/getCharById")
+
+
+http
+    .createServer((req, res)=>{
+
+res.setHeader("Acess-Control-Allow-Origin", "*")
+        if(req.url.includes("/rickandmorty/character")){
+            const id = req.url.split("/").at(-1);
+
+            getCharById(res, +id);
 
 
 
+        }
 
-
-
-http.createServer((request, response)=>{
-
-response.setHeader("Acess-Control-Allow-Origin", "*")
-console.log(request.url)
-if(request.url.includes("/rickandmorty/character")){
-    console.log(request.url.split("/"));
-    const id = request.url.split("/").at(-1)
-    const character = data.find((element)=> element.id ===Number(id));
-    console.log(character);
-
-    return
-        response.writeHead(200,{"Content-type": "application/json"}).end(JSON.stringify(character))
-        console.log(character)
-    
-
-}
 
 
 
