@@ -1,9 +1,12 @@
- const axios = require("axios")
+ const axios = require("axios");
+ const URL = "https://rickandmortyapi.com/api/character/";
  
- const getCharById =(res, id)=>{
-        axios("https://rickandmortyapi.com/api/character/${id}")
+ const getCharById =(req, res)=>{
+        const {id} = req.params;
+        axios(`${URL}/${id}`)
         .then(response => response.data)
         .then(({name, gender, species, origin, image, status}) => {
+                if(name){
                 const character ={
                     id,
                     name,
@@ -13,17 +16,12 @@
                     image,
                     status
                 }
-                return res
-                            .writeHead(200,{"Content-type" : "application/json"})
-                            .end(JSON.stringify(character))
+                return res.status(200).json(character)
+        }
+        return res.status(400).send("Ni de pedo hermano");
+              
         })
-                .catch(error => {
-                        return res.writeHead(500, {"Content-type": "text/plain"})
-                                .end(error.message)
-
-                })
-
-
+        .catch(error => res.status(500).send(error.messsage))
 }
 
-module.exports ={getCharById};
+module.exports ={ getCharById };

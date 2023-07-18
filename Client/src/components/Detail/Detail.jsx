@@ -35,7 +35,7 @@ return(
                 <h2>Gender: {character?.gender}</h2>
                 <h2>Current Status: {character?.status}</h2>               
                 <h2>Origin: {character?.origin?.name}</h2>
-                <h2>Location: {character?.location?.name}</h2>
+                
        </div>
          </div>
        

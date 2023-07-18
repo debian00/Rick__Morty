@@ -10,20 +10,23 @@ import Form from "./components/Form/Form";
 import Favorites from "./components/Favorites/Favorites";
 import Error404 from "./components/404/404"
 
-const email = "debianstark@gmail.com";
-const password = "rosebud77";
+
 function App() {
   const location = useLocation(); //retorna un objeto con la prop pathname
   const navigate = useNavigate();
   const [characters, setCharacters] = useState([]);
-  const [access, SetAccess] = useState(false);
+  const [access, setAccess] = useState(false);
 
-  const login = (userData) => {
-    if (userData.email === email && userData.password === password) {
-      SetAccess(true);
-      navigate("/home");
-    }
-  }
+  const login = (userData)=> {
+    const { email, password } = userData;
+    const URL = 'http://localhost:3001/rickandmorty/login/';
+    axios(URL + `?email=${email}&password=${password}`)
+    .then(({ data }) => {
+       const { access } = data;
+       setAccess(access);
+       access && navigate('/home');
+    });
+ }
 
   useEffect(() => {
      !access && navigate('/');

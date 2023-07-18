@@ -11,27 +11,25 @@ const initialState = {
     switch (type) {
     
       case ADD_FAV:
-        return{
-                ...state, 
-                myFavorites:[...state.allCharactersFav, payload], 
-                allCharactersFav: [...state.allCharactersFav, payload]
-        }
-        case REMOVE_FAV:
-            return{
-                ...state,
-                myFavorites: state.myFavorites.filter(fav => fav.id !== payload)
-            }
+        return { 
+          ...state, 
+          myFavorites: payload, 
+          allCharactersFav: payload };
 
-        case FILTER:
-          const allCharactersFiltered = state.allCharactersFav.filter(character =>
-            character.gender === payload)
-          return{
-                ...state,
-                myFavorites:
-                payload === "allCharacters"
-                ? [...state.allCharactersFav]
-                : allCharactersFiltered
-            
+      case REMOVE_FAV:
+        return { 
+          ...state, 
+          myFavorites: payload };
+
+      case FILTER:
+        const allCharactersFiltered = state.allCharactersFav.filter(character =>
+        character.gender === payload)
+        return{
+           ...state,
+          myFavorites:
+          payload === "allCharacters"
+          ? [...state.allCharactersFav]
+          : allCharactersFiltered            
           }
           case ORDER:
             const allCharactersFavCopy = [...state.allCharactersFav]
