@@ -12,7 +12,6 @@ function Card({
   status,
   origin,
   image,
-  onClose,
   addFav,
   removeFav,
   myFavorites,
@@ -25,7 +24,7 @@ function Card({
       removeFav(id);
     } else {
       setIsFav(true);
-      addFav({ id, name, species, gender, status, origin, image, onClose });
+      addFav({ id, name, species, gender, status, origin, image, });
     }
   };
 
@@ -45,8 +44,7 @@ function Card({
         <button onClick={handleFavorite}>🤍 </button>
       )}
       <div className={styles.wrap}>
-        <div >
-          <button onClick={() => onClose(id)}>X</button>
+        <div >         
           <NavLink to={`/detail/${id}`}>
             <img src={image} alt={name} />
             <h3>{name}</h3>

@@ -1,12 +1,14 @@
-
+import styles from "./About.module.css"
 
 
 
 const About =() =>{
 return(
-<div>
-    <h1>Work in progress....</h1>
-    <p>Lol</p>
+<div className={styles.containerabout}>
+    <div className={styles.container}>
+    <h1>Luis Armando Urbina R.</h1>
+    <p>FullStack Developer</p>
+    </div>
 </div>
 )
 }
