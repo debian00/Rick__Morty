@@ -1,4 +1,4 @@
-const {login} = require("../controllers/login")
+const {login, createUser} = require("../controllers/login")
 const { getCharById } = require("../controllers/getCharById")
 const {postFav, deleteFav} = require("../controllers/handleFavorites")
 
@@ -17,5 +17,21 @@ const router = require("express").Router();
     router.delete("/fav/:id", (req, res)=>{
         deleteFav(req, res);        
     })
+
+    router.post("/create", async (req, res)=>{
+        const {userToBeCreated} = req.body;   
+            if(userToBeCreated.email){
+                    try {
+                        const creation = await createUser(userToBeCreated);
+                        res.json({msg: "Created", data: creation})
+                    } catch (error) {
+                        res.send(error)
+                    }
+
+
+            }
+        
+
+    })  
 
     module.exports = router;
